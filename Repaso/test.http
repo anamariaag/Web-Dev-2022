@@ -1,0 +1,41 @@
+// Request a jsonplaceholder/users
+GET https://jsonplaceholder.typicode.com/users
+
+###
+// Request a un usuario en especifico
+GET https://jsonplaceholder.typicode.com/users/11
+###
+// Request a un usuario que no existe: 
+GET https://jsonplaceholder.typicode.com/users/100
+
+
+###
+POST https://jsonplaceholder.typicode.com/users
+content-type: application/json
+
+    {
+    "name": "Ana Maria",
+    "username": "ANAMA",
+    "email": "sistemas2@april.biz",
+    "address": {
+      "street": "Kulas Light",
+      "suite": "Apt. 556",
+      "city": "Gwenborough",
+      "zipcode": "92998-3874",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      }
+    },
+    "phone": "1-770-736-8031 x56442",
+    "website": "hildegard.org",
+    "company": {
+      "name": "Romaguera-Crona",
+      "catchPhrase": "Multi-layered client-server neural-net",
+      "bs": "harness real-time e-markets"
+    }
+  }
+
+
+###
+GET http://localhost:3000/users

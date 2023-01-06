@@ -1,0 +1,7 @@
+POST https://api.npoint.io/e8f98e9224bb5595ff5d HTTP/1.1
+Content-Type: application/application/json
+
+{
+    "var1" : "Adiós",
+    "var2" : "mundo"
+}

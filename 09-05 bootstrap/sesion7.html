@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Bootstrap</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .carousel {
+            width: 500px;
+        }
+    </style>
+</head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-dark justify-content-center fixed-top">
+
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="sesion7.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp">NavBar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.w3schools.com/bootstrap4/bootstrap_modal.asp">Modal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.w3schools.com/bootstrap4/bootstrap_forms.asp">Forms</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.w3schools.com/bootstrap4/bootstrap_carousel.asp">Carousel</a>
+          </li>
+        </ul>  
+    </nav>
+
+    <div>
+        <h1>Introducción a Bootstrap</h1>
+    </div>
+    <div id="demo" class="carousel slide X" data-ride="carousel">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+          <li data-target="#demo" data-slide-to="3"></li>
+          <li data-target="#demo" data-slide-to="4"></li>
+          <li data-target="#demo" data-slide-to="5"></li>
+          <li data-target="#demo" data-slide-to="6"></li>
+          <li data-target="#demo" data-slide-to="7"></li>
+        </ul>
+      
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="imagenes/atardecer.jpg" alt="Atardecer">
+          </div>
+          <div class="carousel-item">
+            <img src="imagenes/brooklyn.jpg" alt="Brooklyn">
+          </div>
+          <div class="carousel-item">
+            <img src="imagenes/carretera.jpg" alt="Carretera">
+          </div>
+          <div class="carousel-item">
+            <img src="imagenes/lourve.jpg" alt="Lourve">
+          </div>
+          <div class="carousel-item">
+            <img src="imagenes/motos.jpg" alt="Carretera">
+          </div>
+        </div>
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+    
+    <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    Open Forms
+  </button>
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <!-- Modal Header -->
+            <div class="modal-header">
+            <h4 class="modal-title">Forms</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+            <h1>Formulario 1 simple</h1>
+            <form action="">
+                <label for="nombre">Nombre:</label>
+                <input id="nombre" type="text" name="name"><br>
+
+                <label for="apellido">Apellido:</label>
+                <input id="apellido" type="text" name="apellido"><br>
+
+                <label for="comentarios">Comentarios:</label><br>
+                <textarea name="comentarios" rows="5" cols="40">Valor por defecto de texto grande
+                </textarea><br>
+
+                <input type="submit" value="Guardar">
+            </form>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="alert alert-success">
+        <strong>Success!</strong> Indicates a successful or positive action.
+      </div>
+      
+      <div class="alert alert-info">
+        <strong>Info!</strong> Indicates a neutral informative change or action.
+      </div>
+      
+      <div class="alert alert-warning">
+        <strong>Warning!</strong> Indicates a warning that might need attention.
+      </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

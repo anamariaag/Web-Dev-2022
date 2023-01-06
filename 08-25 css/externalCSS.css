@@ -1,0 +1,13 @@
+/**Las propiedades se toman en cuenta de lo general a lo particular**/
+
+body{
+    background-color: rgb(181, 156, 204);
+}
+h1{
+    color:rgb(10, 10, 52);
+    text-align: center;
+}
+p{
+    color:rgb(1, 30, 13);
+    text-align: right;
+}

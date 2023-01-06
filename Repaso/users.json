@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Ana",
+        "email": "ana.anaya@iteso.mx",
+        "edad": 21,
+        "sexo": "M"
+    },
+    {
+        "id": 2,
+        "name": "Cinthya",
+        "email": "cinthya.gonzalez@iteso.mx",
+        "edad": 20,
+        "sexo": "M"
+    },
+    {
+        "id": 3,
+        "name": "Valeria",
+        "email": "valeria.ramirez@iteso.mx",
+        "edad": 20,
+        "sexo": "M"
+    }
+]

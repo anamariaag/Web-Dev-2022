@@ -1,0 +1,57 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Diego",
+      "email": "diego@gmail.com",
+      "edad": 25,
+      "sexo": "H"
+    },
+    {
+      "id": 2,
+      "name": "Ana",
+      "email": "ana@gmail.com",
+      "edad": 22,
+      "sexo": "M"
+    },
+    {
+      "id": 3,
+      "name": "Valeria",
+      "email": "valeria@gmail.com",
+      "edad": 21,
+      "sexo": "M"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Producto 1",
+      "sku": "PROD-1",
+      "price": 12
+    },
+    {
+      "id": 2,
+      "name": "Producto 2",
+      "sku": "PROD-2",
+      "price": 33
+    },
+    {
+      "name": "NewProduct",
+      "sku": "PROD-NEW",
+      "price": 100,
+      "id": 3
+    }
+  ],
+  "banks": [
+    {
+      "id": 1,
+      "name": "Banco 1",
+      "code": "B1"
+    },
+    {
+      "id": 2,
+      "name": "Banco 2",
+      "code": "B2"
+    }
+  ]
+}

@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    </head>
+
+    <style>
+        .carousel {
+            width: 100%;
+            height: 900px;
+            margin:auto;
+        }
+
+        .jumbotron{
+            width: 90%;
+            margin: auto;
+        }
+        .active {
+        color:red;
+        }
+    </style>
+
+    <body>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+
+
+    <nav class="navbar navbar-expand-sm bg-light">
+    <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#" aria-current="page">
+                    <img src ="imagenes/home icon.jpg" class ="rounded-circle" width="30" height="30">
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="pagina A.html">Página A</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="pagina B.html">Página B</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="usuarios.html">Ver usuarios</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto nav-flex-icons">
+            <li class="nav-item" data-toggle="modal" data-target="#register">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-user-alt"></i> Crear cuenta
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="modal" data-target="#login">
+                <a class="nav-link" href="#" >
+                    <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+<!--MODAL DE LOGIN-->
+        <div class="modal fade" id="login">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title">Iniciar sesión</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="form-group">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-user-alt"></i></span>
+                            <input type="email" class="form-control" placeholder="Ingresa tu email" id="email">
+                        </div></div>
+                        <div class="form-group">
+                            <label for="pwd">Contraseña:</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                            <input type="password" class="form-control" placeholder="Ingresa tu contraseña" id="pwd">
+                            </div>
+                        </div>
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox"> Recordar usuario
+                            </label>
+                        </div>
+                        <button type="button" class="btn btn-primary">Iniciar sesión</button>
+                        <p><br></be>¿No tienes una cuenta? <a class="link" href="#" data-toggle="modal" data-target="#register">Registrate aquí.</a></p>
+                    </form>
+                    </div>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+                </div>
+                </div>
+            </div>
+
+<!--MODAL DE REGISTER-->
+            <div class="modal fade" id="register">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <!-- Modal Header -->
+                        <div class="modal-header">
+                        <h4 class="modal-title">Registrar usuario</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="form-group">
+                        <form action="">
+                            <div class="form-group">
+                                <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Nombre(s)" id="nombre" 
+                                minlength="3" maxlength="40" required>
+                            </div></div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Apellidos" id="apellido"
+                                minlength="3" maxlength="40" required>
+                            </div></div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Correo electrónico" id="email"
+                                required>
+                            </div></div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                <input type="password" class="form-control" placeholder="Contraseña" id="pass"
+                                minlength="6" maxlength="40" required pattern="A-Za-z0-9{6-40}"
+                                title="Letras mayúscula y minúscula y números. Tamaño minimo: 6.">
+                            </div></div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                <input type="password" class="form-control" placeholder="Confirmar contraseña" id="pass"
+                                minlength="6" maxlength="40" required pattern="A-Za-z0-9{6-40}"
+                                title="Letras mayúscula y minúscula y números. Tamaño minimo: 6.">
+                            </div></div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                <input type="date" class="form-control" id="date" 
+                                max="11/09/2022" min="1/1/1900" required>
+                            </div></div>
+                            <input type="radio" name="gender" value="t1" checked required> 
+                            <label for="gender">Hombre</label>
+                            <br>
+                            <input type="radio" name="gender" value="t2" required> 
+                            <label for="gender">Mujer</label>
+                            <div class="form-group">
+                                <div class="input-group">
+                                <input type="url" class="form-control" placeholder="URL de imagen de perfil" id="img"
+                                required>
+                            </div></div>
+                        
+                        </div>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                    <input type="submit" class="btn btn-success" value="Registrarse" onclick="alertaSuccess()">
+                    <button type="button" class="btn btn-light" data-dismiss="modal">Cerrar</button>
+                    </div></form>
+                    </div>
+                    </div>
+                </div>
+
+        
+        <script>
+        function alertaSuccess() {
+        alert("¡Registro exitoso!");
+        }
+        </script>
+
+        <div class="jumbotron">
+            <h1>Volleyball World    <i class="fas fa-volleyball-ball"></i></h1>
+            <p>El voleibol, vóleibol, volibol, vólibol, balonvolea o simplemente vóley, es un deporte que se juega con una pelota y en el que dos equipos, integrados por seis jugadores cada uno, se enfrentan sobre un área de juego separada por una red central.</p>
+        </div>
+
+
+        <!--CAROUSEL-->
+        <div id="demo" class="carousel slide X" data-ride="carousel">
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+              <li data-target="#demo" data-slide-to="3"></li>
+            </ul>
+          
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <center>
+                <a id='pIz6ZbB5TIVZsR9miHlgsg' class='gie-single' href='http://www.gettyimages.com/detail/1332500799' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'></a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'pIz6ZbB5TIVZsR9miHlgsg',sig:'bFw8o7AOQaJNpQOXXFC4VN1ZBBDHOMsxG1j6UGZQNIE=',w:'90%',h:'600px',items:'1332500799',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+                </center>
+            </div>
+              <div class="carousel-item">
+                <center>
+                <a id='JdcJXL8aRft1qnh0NvgJHA' class='gie-single' href='http://www.gettyimages.com/detail/1330542022' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'></a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'JdcJXL8aRft1qnh0NvgJHA',sig:'3TblwraJ4_NMMtK0rXW4AX5O0Mm5T5pdvH0gj7WaeTc=',w:'90%',h:'600px',items:'1330542022',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+                </center>
+            </div>
+            <div class="carousel-item">
+                <center>
+                <a id='RUVI3jmtTZd179B0jJFFUQ' class='gie-single' href='http://www.gettyimages.com/detail/591961502' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'></a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'RUVI3jmtTZd179B0jJFFUQ',sig:'hPpew48I9Q2OwmDXAyMjFYbs4HGncwicNYWqctFECKo=',w:'90%',h:'600px',items:'591961502',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+                </center>
+            </div>
+            <div class="carousel-item">
+                <center>
+                    <a id='4knIlo7zQEZFbl4k4wlHfw' class='gie-single' href='http://www.gettyimages.com/detail/586844422' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'4knIlo7zQEZFbl4k4wlHfw',sig:'ZER4tZ-GHN9QfmOVr4XGEBTGq1oIq7NqjtG-uDpEfjI=',w:'90%',h:'600px',items:'586844422',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+                </center>
+            </div>
+            </div>
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+            </div>
+
+        
+              
+
+
+
+
+    </body>
+</html>

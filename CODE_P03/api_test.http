@@ -1,0 +1,8 @@
+//PRUEBAS PRÁCTICA 4
+//Prueba de root
+
+GET https://jsonplaceholder.typicode.com/users
+
+###
+
+GET http://localhost:3000/

@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Users</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+</head>
+
+
+  <style>
+    .media{
+        border-color: gray;
+        border-radius: 5px;
+        width: 80%;
+        margin: auto;
+        padding: 20px
+    }
+    .user-img{
+        width: 150px;
+    }
+  </style>
+
+  <body>
+      
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+
+
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-sm bg-light">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="home.html">
+                    <img src ="imagenes/home icon.jpg" class ="rounded-circle" width="30" height="30">
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="pagina A.html">Página A</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="pagina B.html">Página B</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Ver usuarios</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto nav-flex-icons">
+            <li class="nav-item" data-toggle="modal" data-target="#register">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-user-alt"></i> Crear cuenta
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="modal" data-target="#login">
+                <a class="nav-link" href="#" >
+                    <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <!--MODAL DE LOGIN-->
+    <div class="modal fade" id="login">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <!-- Modal Header -->
+                <div class="modal-header">
+                <h4 class="modal-title">Iniciar sesión</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="form-group">
+                <form action="">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-user-alt"></i></span>
+                        <input type="email" class="form-control" placeholder="Ingresa tu email" id="email">
+                    </div></div>
+                    <div class="form-group">
+                        <label for="pwd">Contraseña:</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                        <input type="password" class="form-control" placeholder="Ingresa tu contraseña" id="pwd">
+                        </div>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Recordar usuario
+                        </label>
+                    </div>
+                    <button type="button" class="btn btn-primary">Iniciar sesión</button>
+                    <p><br></be>¿No tienes una cuenta? <a class="link" href="#" data-toggle="modal" data-target="#register">Registrate aquí.</a></p>
+                </form>
+                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+            </div>
+            </div>
+            </div>
+        </div>
+
+<!--MODAL DE REGISTER-->
+        <div class="modal fade" id="register">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title">Registrar usuario</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="form-group">
+                    <form action="">
+                        <div class="form-group">
+                            <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Nombre(s)" id="nombre" 
+                            minlength="3" maxlength="40" required>
+                        </div></div>
+                        <div class="form-group">
+                            <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Apellidos" id="apellido"
+                            minlength="3" maxlength="40" required>
+                        </div></div>
+                        <div class="form-group">
+                            <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Correo electrónico" id="email"
+                            required>
+                        </div></div>
+                        <div class="form-group">
+                            <div class="input-group">
+                            <input type="password" class="form-control" placeholder="Contraseña" id="pass"
+                            minlength="6" maxlength="40" required pattern="A-Za-z0-9{6-40}"
+                            title="Letras mayúscula y minúscula y números. Tamaño minimo: 6.">
+                        </div></div>
+                        <div class="form-group">
+                            <div class="input-group">
+                            <input type="password" class="form-control" placeholder="Confirmar contraseña" id="pass"
+                            minlength="6" maxlength="40" required pattern="A-Za-z0-9{6-40}"
+                            title="Letras mayúscula y minúscula y números. Tamaño minimo: 6.">
+                        </div></div>
+                        <div class="form-group">
+                            <div class="input-group">
+                            <input type="date" class="form-control" id="date" 
+                            max="11/09/2022" min="1/1/1900" required>
+                        </div></div>
+                        <input type="radio" name="gender" value="t1" checked required> 
+                        <label for="gender">Hombre</label>
+                        <br>
+                        <input type="radio" name="gender" value="t2" required> 
+                        <label for="gender">Mujer</label>
+                        <div class="form-group">
+                            <div class="input-group">
+                            <input type="url" class="form-control" placeholder="URL de imagen de perfil" id="img"
+                            required>
+                        </div></div>
+                    
+                    </div>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                <input type="submit" class="btn btn-success" value="Registrarse" onclick="alertaSuccess()">
+                <button type="button" class="btn btn-light" data-dismiss="modal">Cerrar</button>
+                </div></form>
+                </div>
+                </div>
+            </div>
+
+    <!--SEARCH BAR-->
+      
+        <br/>  
+        <div class="row justify-content-center">  
+            <div class="col-12 col-md-10 col-lg-8">  
+                <form action="">  
+                    <div class="card-body row no-gutters align-items-center">  
+                         
+                        <div class="col">  
+                            <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Nombre de usuario a buscar">  
+                        </div>  
+                        <div class="col-1">
+                        </div>
+                        <div class="col-auto">  
+                            <button class="btn btn-lg btn-primary" type="submit">Buscar </button>  
+                        </div>  
+                    </div>
+                </form>  
+            </div> 
+        </div>  
+    
+
+
+
+
+    <!--USERS-->
+    <div class="media border rounded-6">
+        <div class="media-left align-self-center">
+            <img class="mr-6 rounded-circle user-img" src="imagenes/tj.jpg">
+        </div>
+        
+        <div class="media-body">
+            <h5 class="mt-0">TJ DeFalco</h5>
+            <p>
+                Born: 1997
+            </p>
+            <p>
+                Team: Asseco Resovia, USA
+            </p>
+            <p>
+            He is part of the US national team, a participant at the Olympic Games Tokyo 2020. At the professional club level, he plays for Asseco Resovia.
+            Parents are Torey and Gina. T.J. was one of six siblings who all played volleyball and all have names starting with T... sister Teagan represented U.S. on 2019 Beach U21 National Team and played beach for Grand Canyon University.
+            At 24, DeFalco and teammate Kyle Ensing were the youngest players on the U.S. team for the 2020 Tokyo Olympic Games.
+            TJ competed in beach volleyball at the 2014 Youth Olympic Games and at the U19 World Championships.
+            Played junior volleyball at Huntington Beach Club.
+            </p>
+           
+        </div>
+
+        <div class="media-right align-self-center">
+            <button type="button" class="btn btn-primary">
+                <i class="fas fa-search" aria-hidden="true"></i>
+            </button>
+            <br><br>
+            <button type="button" class="btn btn-primary">
+                <i class="fas fa-edit" aria-hidden="true"></i>
+            </button>
+            <br><br>
+            <button type="button" class="btn btn-primary"data-toggle="modal" data-target="#deleteUserTJ">
+                <i class="fas fa-trash-alt" aria-hidden="true"></i>
+            </button>
+
+        </div>
+    </div>
+<br>
+    <div class="media border rounded-6">
+        <div class="media-left align-self-center">
+            <img class="mr-6 rounded-circle user-img" src="imagenes/logan.webp">
+        </div>
+        
+        <div class="media-body">
+            <h5 class="mt-0">Logan Tom</h5>
+            <p>
+                Born: 1981
+            </p>
+            <p>
+                Team: retired, USA
+            </p>
+            <p>
+            Logan Maile Lei Tom is an American indoor volleyball, beach volleyball player, and current head coach of the Israel women's national volleyball team. She is a four-time Olympian at the outside hitter position. At age 19, Logan became the youngest woman ever to be selected for an American Olympic volleyball team when she competed at the 2000 Olympic Games in Sydney.
+        </div>
+
+        <div class="media-right align-self-center">
+            <button type="button" class="btn btn-primary">
+                <i class="fas fa-search" aria-hidden="true"></i>
+            </button>
+            <br><br>
+            <button type="button" class="btn btn-primary">
+                <i class="fas fa-edit" aria-hidden="true"></i>
+            </button>
+            <br><br>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteUserLogan">
+                <i class="fas fa-trash-alt" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+<br>
+    <div class="media border rounded-6">
+        <div class="media-left align-self-center">
+            <img class="mr-6 rounded-circle user-img" src="imagenes/ivan.jpg">
+        </div>
+        
+        <div class="media-body">
+            <h5 class="mt-0">Ivan Zaytsev</h5>
+            <p>
+                Born: 1988
+            </p>
+            <p>
+                Team: Lube, Italy
+            </p>
+            <p>
+            Nicknamed lo Zar, is an Italian volleyball player of Russian origin, the captain of Italy men's national volleyball team, a bronze medalist of the Olympic Games London 2012, silver medalist of the European Championship, bronze medalist of the World League, Italian Champion and silver medalist of the Olympic Games Rio 2016.
+
+        </div>
+
+        <div class="media-right align-self-center">
+            <button type="button" class="btn btn-primary">
+                <i class="fas fa-search" aria-hidden="true"></i>
+            </button>
+            <br><br>
+            <button type="button" class="btn btn-primary">
+                <i class="fas fa-edit" aria-hidden="true"></i>
+            </button>
+            <br><br>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteUserIvan">
+                <i class="fas fa-trash-alt" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+
+    
+
+
+    <!--MODAL DELETEUSER-->
+
+    <!--TJ DEFALCO-->
+    <div class="modal fade" id="deleteUserTJ">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Eliminar jugador</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+            <!-- Modal body -->
+                <div class="modal-body">
+                    <p class="text-center">¿Estas seguro que deseas eliminar al jugador?
+                    </p>
+                    <h5 class="text-center">TJ DeFalco</h5>
+                    <img class="rounded-circle user-img align-items-center" src="imagenes/tj.jpg">
+                    <p>
+                        <br>
+                        Born: 1997
+                    </p>
+                    <p>
+                        Team: Asseco Resovia, USA
+                    </p>
+                    <p>
+                        He is part of the US national team, a participant at the Olympic Games Tokyo 2020. At the professional club level, he plays for Asseco Resovia. Parents are Torey and Gina. T.J. was one of six siblings who all played volleyball and all have names starting with T... sister Teagan represented U.S. on 2019 Beach U21 National Team and played beach for Grand Canyon University. At 24, DeFalco and teammate Kyle Ensing were the youngest players on the U.S. team for the 2020 Tokyo Olympic Games. TJ competed in beach volleyball at the 2014 Youth Olympic Games and at the U19 World Championships. Played junior volleyball at Huntington Beach Club.
+                    </p>
+                </div>
+            <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger">Si, eliminar</button>
+                    <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--LOGAN TOM-->
+    <div class="modal fade" id="deleteUserLogan">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Eliminar jugador</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+            <!-- Modal body -->
+                <div class="modal-body">
+                    <p class="text-center">¿Estas seguro que deseas eliminar al jugador?
+                    </p>
+                    <h5 class="text-center">Logan Tom</h5>
+                    <img class="rounded-circle user-img align-items-center" src="imagenes/logan.webp">
+                    <p>
+                        <br>
+                        Born: 1981
+                    </p>
+                    <p>
+                        Team: retired, USA
+                    </p>
+                    <p>
+                    Logan Maile Lei Tom is an American indoor volleyball, beach volleyball player, and current head coach of the Israel women's national volleyball team. She is a four-time Olympian at the outside hitter position. At age 19, Logan became the youngest woman ever to be selected for an American Olympic volleyball team when she competed at the 2000 Olympic Games in Sydney.
+                    </p>
+                </div>
+            <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger">Si, eliminar</button>
+                    <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--IVAN ZAYTSEV-->
+    <div class="modal fade" id="deleteUserIvan">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Eliminar jugador</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+            <!-- Modal body -->
+                <div class="modal-body">
+                    <p class="text-center">¿Estas seguro que deseas eliminar al jugador?
+                    </p>
+                    <h5 class="text-center">Ivan Zaytsev</h5>
+                    <img class="rounded-circle user-img align-items-center" src="imagenes/ivan.jpg">
+                    <p>
+                        <br>
+                        Born: 1988
+                    </p>
+                    <p>
+                        Team: Lube, Italy
+                    </p>
+                    <p>
+                    Nicknamed lo Zar, is an Italian volleyball player of Russian origin, the captain of Italy men's national volleyball team, a bronze medalist of the Olympic Games London 2012, silver medalist of the European Championship, bronze medalist of the World League, Italian Champion and silver medalist of the Olympic Games Rio 2016.
+                    </p>
+                </div>
+            <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger">Si, eliminar</button>
+                    <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--PAGINATION-->
+    <div class="text-center mt-3 mt-sm-3">
+        <ul class="pagination justify-content-center mb-0">
+          <li class="page-item disabled"> <span class="page-link">Prev</span> </li>
+          <li class="page-item active" aria-current="page"><span class="page-link">1 </span> <span class="sr-only">(current)</span></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"> <a class="page-link" href="#">Next</a> </li>
+        </ul>
+    </div>
+
+    <br>
+
+
+
+</body>
+</html>

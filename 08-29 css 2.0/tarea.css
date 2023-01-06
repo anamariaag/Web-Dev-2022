@@ -1,0 +1,45 @@
+tr:first-child{
+    background-color: lightgreen;
+    font: italic;
+    font-size:xx-large
+}
+
+tr:nth-child(even){
+    background-color: blueviolet;
+}
+
+tr:nth-child(odd){
+    background-color: violet;
+}
+
+td:hover{
+    background-color: skyblue;
+}
+
+.redondo{
+    border-radius: 10px;
+}
+
+button{
+    padding: 20px;
+    border: 0px;
+    border-radius: 10px;
+    cursor:grab;
+    background-color: aquamarine;
+    color: blue
+}
+
+button:hover{
+    background-color: gray;
+}
+
+input[type=checkbox]{
+    box-shadow: 0 0 0 4px aquamarine;
+    height:1.5em;
+    width:1.5em;
+    cursor:pointer;
+  }
+
+input[type=email]:invalid{
+    border: 2px solid red;
+  }
